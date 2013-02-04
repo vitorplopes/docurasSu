@@ -107,8 +107,4 @@ databaseChangeLog = {
 	changeSet(author: "Madruga (generated)", id: "1359940786868-6") {
 		addForeignKeyConstraint(baseColumnNames: "ATTRIBUTE_ID", baseTableName: "PERSISTENT_SESSION_ATTRIBUTE_VALUE", baseTableSchemaName: "PUBLIC", constraintName: "FK1EFE24BDF830ABF5", deferrable: "false", initiallyDeferred: "false", onDelete: "RESTRICT", onUpdate: "RESTRICT", referencedColumnNames: "ID", referencedTableName: "PERSISTENT_SESSION_ATTRIBUTE", referencedTableSchemaName: "PUBLIC", referencesUniqueColumn: "false")
 	}
-
-	include file: 'Produto-propriedade'
-
-	include file: 'Produto-propriedade.groovy'
 }
