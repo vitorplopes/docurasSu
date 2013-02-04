@@ -9,6 +9,7 @@ class Produto {
 	String resumo
 	String descricao
 	String preco
+	String tags
 	
     static constraints = {
     }
