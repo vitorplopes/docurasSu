@@ -9,7 +9,9 @@ class Produto {
 	String resumo
 	String descricao
 	String preco
+	String nomeArquivoImagem
 	
     static constraints = {
+		nomeArquivoImagem nullable: true
     }
 }
