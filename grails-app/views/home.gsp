@@ -162,7 +162,7 @@ p {
 
 
 				<div class="span3 bg-color-pinkLight">
-					<img src="images/grid.png" class="place-right"
+					<img src="images/Untitled.png" class="place-right"
 						style="margin: 10px;">
 					<h2 class="fg-color-red">&nbsp;Contato</h2>
 
@@ -178,6 +178,8 @@ p {
 				</div>
 
 				<div class="span4 bg-color-pinkLight">
+					<img src="images/facebook-icon.png" class="place-right"
+						style="margin: 10px;">
 					<h2 class="fg-color-red">&nbsp;Facebook</h2>
 
 					<div
@@ -203,38 +205,43 @@ p {
 						style="background-image: url('/DocurasSu/static/images/background.png');">
 
 						<div class="image-collection">
-							<div>
+							<div class="tile image">
 								<img src="images/bolo_flamengo.jpg" />
 								<div class="overlay">Lorem Ipsum is simply dummy text of
 									the printing and typesetting industry.</div>
 							</div>
-						</div>
-						<!-- 
-						<div class="span4" style="background-image: url('/DocurasSu/static/images/background.png');">
-							<div class="tile image double">
+
+							<div class="tile image">
 								<img src="images/bolo_flamengo.jpg" />
+								<div class="overlay">Lorem Ipsum is simply dummy text of
+									the printing and typesetting industry.</div>
 							</div>
-						</div>
-						
-						<div class="span4" style="background-image: url('/DocurasSu/static/images/background.png');">
-							<div class="tile image double">
+
+							<div class="tile image">
 								<img src="images/bolo_flamengo.jpg" />
+								<div class="overlay">Lorem Ipsum is simply dummy text of
+									the printing and typesetting industry.</div>
 							</div>
-						</div>
-						
-						<div class="span4" style="background-image: url('/DocurasSu/static/images/background.png');">
-							<div class="tile image double">
+
+							<div class="tile image">
 								<img src="images/bolo_flamengo.jpg" />
+								<div class="overlay">Lorem Ipsum is simply dummy text of
+									the printing and typesetting industry.</div>
 							</div>
-						</div>
-						
-						<div class="span4" style="background-image: url('/DocurasSu/static/images/background.png');">
-							<div class="tile image double">
+
+							<div class="tile image">
 								<img src="images/bolo_flamengo.jpg" />
+								<div class="overlay">Lorem Ipsum is simply dummy text of
+									the printing and typesetting industry.</div>
 							</div>
+
+							<div class="tile image">
+								<img src="images/bolo_flamengo.jpg" />
+								<div class="overlay">Lorem Ipsum is simply dummy text of
+									the printing and typesetting industry.</div>
+							</div>
+
 						</div>
-					</div>
--->
 						<p class="fg-color-darken padding5 text-center">&nbsp;</p>
 
 					</div>
