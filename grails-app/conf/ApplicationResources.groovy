@@ -1,5 +1,5 @@
 modules = {
-    baseCSS {
+	baseCSS {
 		resource url:'css/base.css', disposition: 'head'
 	}
 	application {
@@ -10,5 +10,7 @@ modules = {
 		resource url:'css/modern-responsive.css', disposition: 'head'
 		resource url:'js/metro/dropdown.js', disposition: 'head'
 		resource url:'js/metro/carousel.js', disposition: 'head'
+		resource url:'js/jPaginate/jquery.paginate.js', disposition: 'head'
+		resource url:'js/jPaginate/css/style.css', disposition: 'head'
 	}
 }
