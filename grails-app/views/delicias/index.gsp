@@ -7,11 +7,13 @@
 	<r:require module="baseCSS" />
 </head>
 <body class="body">
-
+	
+	<g:remoteLink action="delete" id="1" update="message"/>
+	
 	<script type="text/javascript">
 		$(document).ready($(function() {
 			$("#paginacaoSuperior").paginate({
-				count : 100,
+				count : ${params.qtdPaginas},
 				start : 1,
 				display : 8,
 				border : false,
@@ -22,7 +24,18 @@
 				text_hover_color : '#000',
 				background_hover_color : '#fff',
 				images : false,
-				mouse : 'press'
+				mouse : 'press',
+				onChange : function(page){
+					$.ajax({
+		                url: "${g.createLink(controller:'delicias', action:'pagina')}",
+		                data: {offset : 9},
+		                dataType: "json",
+		                async: false,
+		                success: function(html) {
+							$('#divProdutos').html(html);
+		                }
+		            });
+				  }
 			})
 		}));
 	</script>
@@ -54,30 +67,9 @@
 
 		<div class="page-region">
 			<div class="page-region-content">
-				<g:if test="${params.produtos.size() > 0}">
-
-					<div id="paginacaoSuperior" class="jPaginate" style="padding-left: 77px;"></div>
-
-					<div class="image-collection"
-						style="padding: 10px; text-align: center;">
-
-					<g:each in="${params.produtos}" var="produto">
-
-						<div class="tile image shadow">
-
-							<img src="images/${produto.nomeArquivoImagem}" />
-							<div class="overlay">
-								${produto.resumo}
-							</div>
-						</div>
-
-					</g:each>
+			<div id="divProdutos">
+				<g:render template="gridProdutos" bean="${params.produtos}" />			
 			</div>
-
-			</g:if>
-			<g:else>
-						Não há delícias cadastradas... :'-{
-					</g:else>
 		</div>
 	</div>
 	</div>
