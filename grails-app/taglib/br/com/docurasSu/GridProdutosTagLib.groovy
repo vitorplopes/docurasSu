@@ -1,15 +1,14 @@
 package br.com.docurasSu
 
-class ProdutosTagLib {
+class GridProdutosTagLib {
 
-	def produtos = {attrs, body ->
+	def gridProdutos = {attrs, body ->
 		if(attrs.produtos.size() == 0){
 			out << "Não há delícias cadastradas... :'-{"
 			return
 		}
 		
-		out << """<div id='paginacaoSuperior' class='jPaginate' style='padding-left: 77px;'></div>
-				  <div id="divProdutosImageCollection" class="image-collection" style="padding: 10px; text-align: center;">"""
+		out << """<div id="divProdutosImageCollection" class="image-collection" style="padding: 10px; text-align: center;">"""
 		
 		for(produto in attrs.produtos){
 			out << """<div class='tile image shadow'>
@@ -17,7 +16,7 @@ class ProdutosTagLib {
 						  <div class="overlay">
 						  	${produto.resumo}
 						  </div>
-					  </div>"""
+					</div>"""
 		}
 		
 		out << "</div>"

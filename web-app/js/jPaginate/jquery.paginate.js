@@ -108,7 +108,7 @@
 			_divwrapright.css('left',outsidewidth_tmp+6+72+'px');
 		}
 		else{
-			_ulwrapdiv.css('width',outsidewidth+'px');
+			_ulwrapdiv.css('width',outsidewidth+4+'px');
 			_divwrapright.css('left',outsidewidth_tmp+6+'px');
 		}
 		
@@ -244,6 +244,6 @@
 						}
 						insidewidth += this.offsetWidth;
 					})
-					_ul.css('width',insidewidth+'px');
+					_ul.css('width',insidewidth+2+'px');
 	}
 })(jQuery);

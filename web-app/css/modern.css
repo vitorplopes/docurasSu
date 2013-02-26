@@ -5593,7 +5593,8 @@ input[type=submit] {
   text-align: center;
 }
 .image-collection  > div  > img,
-.image-collection  > li  > img {
+.image-collection  > li  > img,
+.image-collection  > div > a > img {
   width: 100%;
   height: auto;
   min-height: 100%;
