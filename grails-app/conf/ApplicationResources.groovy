@@ -1,22 +1,22 @@
 modules = {
 	photoswipe {
-		resource url:'js/photoswipe/klass.min.js', disposition: 'head'
-		resource url:'js/photoswipe/code.photoswipe.jquery-3.0.5.min.js', disposition: 'head'
-		resource url:'css/styles.css', disposition: 'head'
-		resource url:'css/photoswipe.css', disposition: 'head'
+		resource url:'http://dl.dropbox.com/u/144356318/js/photoswipe/klass.min.js', disposition: 'head'
+		resource url:'http://dl.dropbox.com/u/144356318/js/photoswipe/code.photoswipe.jquery-3.0.5.min.js', disposition: 'head'
+		resource url:'http://dl.dropbox.com/u/144356318/css/photoswipe/styles.css', disposition: 'head'
+		resource url:'http://dl.dropbox.com/u/144356318/css/photoswipe/photoswipe.css', disposition: 'head'
 	}
 	baseCSS {
-		resource url:'css/base.css', disposition: 'head'
+		resource url:'http://dl.dropbox.com/u/144356318/css/base.css', disposition: 'head'
 	}
 	application {
-        resource url:'js/application.js'
+        resource url:'http://dl.dropbox.com/u/144356318/js/application.js'
     }
 	metro {
-		resource url:'css/modern.css', disposition: 'head'
-		resource url:'css/modern-responsive.css', disposition: 'head'
-		resource url:'js/metro/dropdown.js', disposition: 'head'
-		resource url:'js/metro/carousel.js', disposition: 'head'
-		resource url:'js/jPaginate/jquery.paginate.js', disposition: 'head'
-		resource url:'js/jPaginate/css/style.css', disposition: 'head'
+		resource url:'http://dl.dropbox.com/u/144356318/css/metro/modern.css', disposition: 'head'
+		resource url:'http://dl.dropbox.com/u/144356318/css/metro/modern-responsive.css', disposition: 'head'
+		resource url:'http://dl.dropbox.com/u/144356318/js/metro/dropdown.js', disposition: 'head'
+		resource url:'http://dl.dropbox.com/u/144356318/js/metro/carousel.js', disposition: 'head'
+		resource url:'http://dl.dropbox.com/u/144356318/js/jPaginate/jquery.paginate.js', disposition: 'head'
+		resource url:'http://dl.dropbox.com/u/144356318/css/jPaginate/style.css', disposition: 'head'
 	}
 }
