@@ -59,13 +59,17 @@ grails.exceptionresolver.params.exclude = ['password']
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
 
+resource.url.prefix = "css/modern.css"
+
 environments {
     development {
         grails.logging.jul.usebridge = true
+		resource.url.prefix = "xpto"
     }
     production {
 		grails.logging.jul.usebridge = false
         grails.serverURL = "http://protected-island-4500.herokuapp.com/home"
+		resource.url.prefix = "http://dl.dropbox.com/u/144356318/"
     }
 }
 

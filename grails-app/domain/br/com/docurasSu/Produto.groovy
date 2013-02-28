@@ -9,9 +9,18 @@ class Produto {
 	String resumo
 	String descricao
 	String preco
-	String nomeArquivoImagem
+	String nomeDiretorioImagens
+	String nomeArquivoImagemPrincipal
+	String nomeArquivoImagemPrincipalThumbnail
+	
+	static hasMany = [imagens : Imagem]
 	
     static constraints = {
-		nomeArquivoImagem nullable: true
+		preco nullable: true
+		nomeDiretorioImagens nullable: true
+		nomeArquivoImagemPrincipal nullable: true
+		nomeArquivoImagemPrincipalThumbnail nullable: true
     }
+	
+	static propriedadesExcluidasListaView = ["resumo", "descricao", "nomeDiretorioImagens", "nomeArquivoImagemPrincipal", "nomeArquivoImagemPrincipalThumbnail"]
 }

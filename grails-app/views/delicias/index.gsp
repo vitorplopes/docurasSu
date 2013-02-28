@@ -18,7 +18,7 @@
 				count : ${params.qtdPaginas},
 				start : 1,
 				display : 8,
-				border : true,
+				border : false,
 				border_color : '#b91d47',
 				text_color : '#b91d47',
 				background_color : '#f0cde2',

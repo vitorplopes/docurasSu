@@ -1,22 +1,54 @@
+import grails.util.Metadata
+
+String prefix = "http://dl.dropbox.com/u/144356318/"
+
+/** Returns {@code true} if we're using run-app. */
+boolean isDevMode() { !Metadata.current.isWarDeployed() }
+
 modules = {
 	photoswipe {
-		resource url:'http://dl.dropbox.com/u/144356318/js/photoswipe/klass.min.js', disposition: 'head'
-		resource url:'http://dl.dropbox.com/u/144356318/js/photoswipe/code.photoswipe.jquery-3.0.5.min.js', disposition: 'head'
-		resource url:'http://dl.dropbox.com/u/144356318/css/photoswipe/styles.css', disposition: 'head'
-		resource url:'http://dl.dropbox.com/u/144356318/css/photoswipe/photoswipe.css', disposition: 'head'
+		if(isDevMode()){
+			resource url:'js/photoswipe/klass.min.js', disposition: 'head'
+			resource url:'js/photoswipe/code.photoswipe.jquery-3.0.5.min.js', disposition: 'head'
+			resource url:'css/photoswipe/styles.css', disposition: 'head'
+			resource url:'css/photoswipe/photoswipe.css', disposition: 'head'
+		}
+		else{
+			resource url: prefix + 'js/photoswipe/klass.min.js', disposition: 'head'
+			resource url: prefix + 'js/photoswipe/code.photoswipe.jquery-3.0.5.min.js', disposition: 'head'
+			resource url: prefix + 'css/photoswipe/styles.css', disposition: 'head'
+			resource url: prefix + 'css/photoswipe/photoswipe.css', disposition: 'head'
+		}
 	}
 	baseCSS {
-		resource url:'http://dl.dropbox.com/u/144356318/css/base.css', disposition: 'head'
+		if(isDevMode()){
+			resource url:'css/base.css', disposition: 'head'
+		}
+		else{
+			resource url: prefix + 'css/base.css', disposition: 'head'
+		}
 	}
 	application {
-        resource url:'http://dl.dropbox.com/u/144356318/js/application.js'
+		resource url:'js/application.js', disposition: 'head'
+
     }
 	metro {
-		resource url:'http://dl.dropbox.com/u/144356318/css/metro/modern.css', disposition: 'head'
-		resource url:'http://dl.dropbox.com/u/144356318/css/metro/modern-responsive.css', disposition: 'head'
-		resource url:'http://dl.dropbox.com/u/144356318/js/metro/dropdown.js', disposition: 'head'
-		resource url:'http://dl.dropbox.com/u/144356318/js/metro/carousel.js', disposition: 'head'
-		resource url:'http://dl.dropbox.com/u/144356318/js/jPaginate/jquery.paginate.js', disposition: 'head'
-		resource url:'http://dl.dropbox.com/u/144356318/css/jPaginate/style.css', disposition: 'head'
+		if(isDevMode()){
+			resource url: 'css/metro/modern.css', disposition: 'head'
+			resource url:'css/metro/modern-responsive.css', disposition: 'head'
+			resource url:'js/metro/dropdown.js', disposition: 'head'
+			resource url:'js/metro/carousel.js', disposition: 'head'
+			resource url:'js/jPaginate/jquery.paginate.js', disposition: 'head'
+			resource url:'css/jPaginate/style.css', disposition: 'head'
+		}
+		else{
+			resource url: prefix + 'css/metro/modern.css', disposition: 'head'
+			resource url: prefix + 'css/metro/modern-responsive.css', disposition: 'head'
+			resource url: prefix + 'js/metro/dropdown.js', disposition: 'head'
+			resource url: prefix + 'js/metro/carousel.js', disposition: 'head'
+			resource url: prefix + 'js/jPaginate/jquery.paginate.js', disposition: 'head'
+			resource url: prefix + 'css/jPaginate/style.css', disposition: 'head'
+		}
+		
 	}
 }
