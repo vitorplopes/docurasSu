@@ -82,6 +82,22 @@ p {
 <r:require module="jquery" />
 <r:require module="metro" />
 <r:require module="baseCSS" />
+<r:require module="photoswipe" />
+
+	<r:script>
+		(function(window, $, PhotoSwipe){
+			
+			$(document).ready(function(){
+				
+				var options = {};
+				$("#divProdutosImageCollection a").photoSwipe(options);
+				
+			});
+			
+			
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+	</r:script>
+
 </head>
 <body class="body">
 	<div class="nav-bar">
@@ -204,44 +220,8 @@ p {
 					<div class="span11 padding10"
 						style="background-image: url('/DocurasSu/static/images/background.png');">
 
-						<div class="image-collection">
-							<div class="tile image">
-								<img src="images/bolo_flamengo.jpg" />
-								<div class="overlay">Lorem Ipsum is simply dummy text of
-									the printing and typesetting industry.</div>
-							</div>
-
-							<div class="tile image">
-								<img src="images/bolo_flamengo.jpg" />
-								<div class="overlay">Lorem Ipsum is simply dummy text of
-									the printing and typesetting industry.</div>
-							</div>
-
-							<div class="tile image">
-								<img src="images/bolo_flamengo.jpg" />
-								<div class="overlay">Lorem Ipsum is simply dummy text of
-									the printing and typesetting industry.</div>
-							</div>
-
-							<div class="tile image">
-								<img src="images/bolo_flamengo.jpg" />
-								<div class="overlay">Lorem Ipsum is simply dummy text of
-									the printing and typesetting industry.</div>
-							</div>
-
-							<div class="tile image">
-								<img src="images/bolo_flamengo.jpg" />
-								<div class="overlay">Lorem Ipsum is simply dummy text of
-									the printing and typesetting industry.</div>
-							</div>
-
-							<div class="tile image">
-								<img src="images/bolo_flamengo.jpg" />
-								<div class="overlay">Lorem Ipsum is simply dummy text of
-									the printing and typesetting industry.</div>
-							</div>
-
-						</div>
+						<g:gridProdutos produtos="${params.ultimosProdutos}"/>
+						
 						<p class="fg-color-darken padding5 text-center">&nbsp;</p>
 
 					</div>

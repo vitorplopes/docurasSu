@@ -8,6 +8,8 @@ class Imagem {
 	String nomeArquivoThumbnail
 	
     static constraints = {
+		nome nullable: true
+		descricao nullable: true
 		nomeArquivoThumbnail nullable: true
     }
 }

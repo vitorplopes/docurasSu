@@ -16,7 +16,7 @@ class Produto {
 	static hasMany = [imagens : Imagem]
 	
     static constraints = {
-		preco nullable: true
+		preco blank: true, nullable: true
 		nomeDiretorioImagens nullable: true
 		nomeArquivoImagemPrincipal nullable: true
 		nomeArquivoImagemPrincipalThumbnail nullable: true

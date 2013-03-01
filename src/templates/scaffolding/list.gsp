@@ -28,6 +28,9 @@
 						allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
 						props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) && it.type != null && !Collection.isAssignableFrom(it.type) }
 						Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
+					%>
+						<th><g:message code="Id/Link"/></th>
+					<%	
 						props.eachWithIndex { p, i ->
 							if (i < 6) {
 								if (p.isAssociation()) { %>
@@ -40,10 +43,9 @@
 				<tbody>
 				<g:each in="\${${propertyName}List}" status="i" var="${propertyName}">
 					<tr class="\${(i % 2) == 0 ? 'even' : 'odd'}">
+					<td><g:link action="show" id="\${${propertyName}.id}">\${fieldValue(bean: ${propertyName}, field: "id")}</g:link></td>
 					<%  props.eachWithIndex { p, i ->
-							if (i == 0) { %>
-						<td><g:link action="show" id="\${${propertyName}.id}">\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</g:link></td>
-					<%      } else if (i < 6) {
+							if (i < 6) {
 								if (p.type == Boolean || p.type == boolean) { %>
 						<td><g:formatBoolean boolean="\${${propertyName}.${p.name}}" /></td>
 					<%          } else if (p.type == Date || p.type == java.sql.Date || p.type == java.sql.Time || p.type == Calendar) { %>
