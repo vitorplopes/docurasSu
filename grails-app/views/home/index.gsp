@@ -120,24 +120,6 @@ p {
 
 					<div class="grid">
 						<div class="row">
-							<div class="carousel span7" data-role="carousel"
-								data-param-auto="false" data-param-effect="fade"
-								style="height: 300px;">
-								<div class="slides">
-									<div class="slide image" id="slide1" style="display: block;">
-										<img src="images/bolo_flamengo.jpg">
-										<div class="description">Bolo 1: Descricao</div>
-									</div>
-
-									<div class="slide mixed" id="slide2" style="display: block;">
-										<img src="images/bolo_flamengo.jpg">
-										<div class="description">Bolo 2: Descricao</div>
-									</div>
-									...
-								</div>
-
-								<span class="control left">‹</span> <span class="control right">›</span>
-							</div>
 							<div
 								class="span4 padding30 text-center place-left bg-color-pinkLight">
 								<h3 class="fg-color-red">
@@ -220,7 +202,7 @@ p {
 					<div class="span11 padding10"
 						style="background-image: url('/DocurasSu/static/images/background.png');">
 
-						<g:gridProdutos produtos="${params.ultimosProdutos}"/>
+						<g:gridProdutos produtos="${ultimosProdutos}"/>
 						
 						<p class="fg-color-darken padding5 text-center">&nbsp;</p>
 

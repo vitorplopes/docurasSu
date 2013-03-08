@@ -12,4 +12,6 @@ class Imagem {
 		descricao nullable: true
 		nomeArquivoThumbnail nullable: true
     }
+	
+	static propriedadesExcluidasListaView = []
 }

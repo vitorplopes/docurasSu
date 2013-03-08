@@ -1,9 +1,8 @@
 package br.com.docurasSu
 
+class CarroselPromocoesTagLib {
 
-class GridProdutosTagLib {
-	
-	def gridProdutos = {attrs, body ->
+	def carroselPromocoes = {attrs, body ->
 		if(attrs.produtos.size() == 0){
 			out << "Não há delícias cadastradas... :'-{"
 			return
@@ -19,5 +18,5 @@ class GridProdutosTagLib {
 		
 		out << "</div>"
 		
-	}	
+	}
 }
