@@ -84,7 +84,7 @@ p {
 <r:require module="baseCSS" />
 <r:require module="photoswipe" />
 
-	<r:script>
+<r:script>
 		(function(window, $, PhotoSwipe){
 			
 			$(document).ready(function(){
@@ -100,26 +100,16 @@ p {
 
 </head>
 <body class="body">
-	<div class="nav-bar">
-		<div class="nav-bar-inner">
-
-			<span class="element"><a href="/DocurasSu/home">Home</a> </span> <span
-				class="divider"></span> <span class="element"><a
-				href="/DocurasSu/bolos">Bolos</a> </span> <span class="divider"></span> <span
-				class="element"><a href="/DocurasSu/bolos">Tortas</a> </span> <span
-				class="divider"></span> <span class="element"><a
-				href="/DocurasSu/bolos">Cupcakes</a> </span>
-
-		</div>
-	</div>
-
-	<div class="bodyWrapper">
+	<div class="bodyWrapper" style="background-image: url('images/bg.png'); background-repeat: repeat;">
 		<div class="page">
 			<div class="page-region">
 				<div class="page-region-content">
 
 					<div class="grid">
 						<div class="row">
+
+							<g:carroselPromocoes promocoes="${promocoes}" />
+
 							<div
 								class="span4 padding30 text-center place-left bg-color-pinkLight">
 								<h3 class="fg-color-red">
@@ -135,81 +125,126 @@ p {
 						</div>
 					</div>
 
+					<div class="grid" style="width: 70%; margin: 0px auto 20px;">
+						<div class="row">
+							<div class="tile icon bg-color-pinkLight">
+								<b class="check"></b>
+								<div class="tile-content">
+									<img src="images/cake_01.png">
+								</div>
+								<div class="brand">
+									<span class="name fg-color-red">Bolos</span>
+								</div>
+							</div>
+							<div class="tile icon bg-color-pinkLight">
+								<b class="check"></b>
+								<div class="tile-content">
+									<img src="images/choco_cupcake.png">
+								</div>
+								<div class="brand">
+									<span class="name fg-color-red">Cupcakes</span>
+								</div>
+							</div>
+							<div class="tile icon bg-color-pinkLight">
+								<b class="check"></b>
+								<div class="tile-content">
+									<img src="images/cake_02.png">
+								</div>
+								<div class="brand">
+									<span class="name fg-color-red">Tortas</span>
+								</div>
+							</div>
+							<div class="tile icon bg-color-pinkLight">
+								<b class="check"></b>
+								<div class="tile-content">
+									<img src="images/docinhos_01.png">
+								</div>
+								<div class="brand">
+									<span class="name fg-color-red">Docinhos</span>
+								</div>
+							</div>
 
+
+						</div>
+					</div>
+
+					<div class="grid">
+						<div class="row">
+							<div class="span4 bg-color-pinkLight">
+								<h2 class="fg-color-red" style="padding-left: 20px;">&nbsp;Quem
+									somos</h2>
+
+								<div
+									style="background-image: url('/DocurasSu/static/images/background.png');">
+									<p class="fg-color-darken padding20 text-justify">Lorem
+										ipsum dolor sit amet, consectetur adipiscing elit. Sed a quam
+										in arcu viverra pretium vel vel est. Proin placerat
+										sollicitudin urna. Integer malesuada mauris a augue pharetra
+										venenatis. Morbi vel lorem non justo auctor varius quis a
+										neque. Nunc vitae nulla ut diam placerat hendrerit sed a
+										ipsum.</p>
+								</div>
+
+							</div>
+
+
+							<div class="span3 bg-color-pinkLight">
+								<img src="images/Untitled.png" class="place-right"
+									style="margin: 10px;">
+								<h2 class="fg-color-red" style="padding-left: 20px;">&nbsp;Contato</h2>
+
+								<div
+									style="background-image: url('/DocurasSu/static/images/background.png');">
+									<p class="fg-color-darken padding10 text-center">(21)
+										9683-4778</p>
+									<p class="fg-color-darken padding10 text-center">(21)
+										3835-5069</p>
+									<p class="fg-color-darken padding10 text-center">docuras.su@gmail.com</p>
+								</div>
+
+							</div>
+
+							<div class="span4 bg-color-pinkLight">
+								<img src="images/facebook-icon.png" class="place-right"
+									style="margin: 10px;">
+								<h2 class="fg-color-red" style="padding-left: 20px;">&nbsp;Facebook</h2>
+
+								<div
+									style="background-image: url('/DocurasSu/static/images/background.png');">
+									<p class="fg-color-darken padding10">Lorem ipsum dolor sit
+										amet, consectetur adipiscing elit. Sed a quam in arcu viverra
+										pretium vel vel est. Proin placerat sollicitudin urna. Integer
+										malesuada mauris a augue pharetra venenatis. Morbi vel lorem
+										non justo auctor varius quis a neque. Nunc vitae nulla ut diam
+										placerat hendrerit sed a ipsum.</p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="grid">
+						<div class="row">
+							<div class="span11 bg-color-pinkLight">
+								<h2 class="fg-color-red" style="padding-left: 20px;">&nbsp;Últimas
+									Delícias!</h2>
+
+								<div class="span11 padding10"
+									style="background-image: url('/DocurasSu/static/images/background.png');">
+
+									<g:gridProdutos produtos="${ultimosProdutos}" />
+
+									<p class="fg-color-darken padding5 text-center">&nbsp;</p>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
 
 				</div>
 			</div>
 		</div>
-
-		<div class="grid">
-			<div class="row">
-				<div class="span4 bg-color-pinkLight">
-					<h2 class="fg-color-red">&nbsp;Quem somos</h2>
-
-					<div
-						style="background-image: url('/DocurasSu/static/images/background.png');">
-						<p class="fg-color-darken padding20 text-justify">Lorem ipsum
-							dolor sit amet, consectetur adipiscing elit. Sed a quam in arcu
-							viverra pretium vel vel est. Proin placerat sollicitudin urna.
-							Integer malesuada mauris a augue pharetra venenatis. Morbi vel
-							lorem non justo auctor varius quis a neque. Nunc vitae nulla ut
-							diam placerat hendrerit sed a ipsum.</p>
-					</div>
-
-				</div>
-
-
-				<div class="span3 bg-color-pinkLight">
-					<img src="images/Untitled.png" class="place-right"
-						style="margin: 10px;">
-					<h2 class="fg-color-red">&nbsp;Contato</h2>
-
-					<div
-						style="background-image: url('/DocurasSu/static/images/background.png');">
-						<p class="fg-color-darken padding10 text-center">(21)
-							9683-4778</p>
-						<p class="fg-color-darken padding10 text-center">(21)
-							3835-5069</p>
-						<p class="fg-color-darken padding10 text-center">docuras.su@gmail.com</p>
-					</div>
-
-				</div>
-
-				<div class="span4 bg-color-pinkLight">
-					<img src="images/facebook-icon.png" class="place-right"
-						style="margin: 10px;">
-					<h2 class="fg-color-red">&nbsp;Facebook</h2>
-
-					<div
-						style="background-image: url('/DocurasSu/static/images/background.png');">
-						<p class="fg-color-darken padding10">Lorem ipsum dolor sit
-							amet, consectetur adipiscing elit. Sed a quam in arcu viverra
-							pretium vel vel est. Proin placerat sollicitudin urna. Integer
-							malesuada mauris a augue pharetra venenatis. Morbi vel lorem non
-							justo auctor varius quis a neque. Nunc vitae nulla ut diam
-							placerat hendrerit sed a ipsum.</p>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<div class="grid">
-			<div class="row">
-				<div class="span11 bg-color-pinkLight">
-					<h2 class="fg-color-red">&nbsp;Últimas Delícias!</h2>
-
-					<div class="span11 padding10"
-						style="background-image: url('/DocurasSu/static/images/background.png');">
-
-						<g:gridProdutos produtos="${ultimosProdutos}"/>
-						
-						<p class="fg-color-darken padding5 text-center">&nbsp;</p>
-
-					</div>
-				</div>
-			</div>
-
-		</div>
+	</div>
 </body>
 </html>

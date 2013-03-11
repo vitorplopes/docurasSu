@@ -13,5 +13,5 @@ class Imagem {
 		nomeArquivoThumbnail nullable: true
     }
 	
-	static propriedadesExcluidasListaView = []
+	static propriedadesExcluidasListaView = ["descricao", "nomeArquivoThumbnail"]
 }

@@ -25,7 +25,7 @@ class Produto {
     static constraints = {
 		preco blank: true, nullable: true
 		tipo blank: true, nullable: true
-		nomeDiretorioImagens nullable: true
+		nomeDiretorioImagens nullable: true, unique: true
 		nomeArquivoImagemPrincipal nullable: true
 		nomeArquivoImagemPrincipalThumbnail nullable: true
     }
