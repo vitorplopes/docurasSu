@@ -100,7 +100,7 @@ p {
 
 </head>
 <body class="body">
-	<div class="bodyWrapper" style="background-image: url('images/bg.png'); background-repeat: repeat;">
+	<div class="bodyWrapper">
 		<div class="page">
 			<div class="page-region">
 				<div class="page-region-content">
@@ -127,43 +127,50 @@ p {
 
 					<div class="grid" style="width: 70%; margin: 0px auto 20px;">
 						<div class="row">
-							<div class="tile icon bg-color-pinkLight">
-								<b class="check"></b>
-								<div class="tile-content">
-									<img src="images/cake_01.png">
+							<a href="docuras?tipo=B">
+								<div class="tile icon bg-color-pinkLight tile-pinkLight">
+									<b class="check"></b>
+									<div class="tile-content">
+										<img src="images/cake_01.png">
+									</div>
+									<div class="brand">
+										<span class="name fg-color-red">Bolos</span>
+									</div>
 								</div>
-								<div class="brand">
-									<span class="name fg-color-red">Bolos</span>
+							</a>
+							<a href="docuras?tipo=C">
+								<div class="tile icon bg-color-pinkLight tile-pinkLight">
+									<b class="check"></b>
+									<div class="tile-content">
+										<img src="images/choco_cupcake.png">
+									</div>
+									<div class="brand">
+										<span class="name fg-color-red">Cupcakes</span>
+									</div>
 								</div>
-							</div>
-							<div class="tile icon bg-color-pinkLight">
-								<b class="check"></b>
-								<div class="tile-content">
-									<img src="images/choco_cupcake.png">
+							</a>
+							<a href="docuras?tipo=T">
+								<div class="tile icon bg-color-pinkLight tile-pinkLight">
+									<b class="check"></b>
+									<div class="tile-content">
+										<img src="images/cake_02.png">
+									</div>
+									<div class="brand">
+										<span class="name fg-color-red">Tortas</span>
+									</div>
 								</div>
-								<div class="brand">
-									<span class="name fg-color-red">Cupcakes</span>
+							</a>
+							<a href="docuras?tipo=D">
+								<div class="tile icon bg-color-pinkLight tile-pinkLight">
+									<b class="check"></b>
+									<div class="tile-content">
+										<img src="images/docinhos_01.png">
+									</div>
+									<div class="brand">
+										<span class="name fg-color-red">Docinhos</span>
+									</div>
 								</div>
-							</div>
-							<div class="tile icon bg-color-pinkLight">
-								<b class="check"></b>
-								<div class="tile-content">
-									<img src="images/cake_02.png">
-								</div>
-								<div class="brand">
-									<span class="name fg-color-red">Tortas</span>
-								</div>
-							</div>
-							<div class="tile icon bg-color-pinkLight">
-								<b class="check"></b>
-								<div class="tile-content">
-									<img src="images/docinhos_01.png">
-								</div>
-								<div class="brand">
-									<span class="name fg-color-red">Docinhos</span>
-								</div>
-							</div>
-
+							</a>
 
 						</div>
 					</div>

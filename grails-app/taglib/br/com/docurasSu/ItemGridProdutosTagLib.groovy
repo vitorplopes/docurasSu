@@ -29,8 +29,6 @@ class ItemGridProdutosTagLib {
 			builder.img(src: g.createLinkTo(dir: imagemService.getCaminhoImagemProdutoAmbiente(attrs.produto.nomeDiretorioImagens), file: attrs.produto.nomeArquivoImagemPrincipalThumbnail))
 		}
 	
-		builder.div('class': 'overlay'){
-			builder.yield attrs.produto.resumo
-		}
+		builder.div 'class': 'overlay', "${attrs.produto.resumo}"
 	}
 }

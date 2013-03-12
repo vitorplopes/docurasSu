@@ -11,6 +11,7 @@ class Promocao {
 	String nomeDiretorioImagens
 	String nomeArquivoImagemPrincipal
 	String nomeArquivoImagemPrincipalThumbnail
+	String nomeArquivoImagemReduzida
 	boolean valida = true
 	
 	static hasMany = [imagens : Imagem]
@@ -25,7 +26,8 @@ class Promocao {
 		descricao blank: true, nullable: true
 		nomeDiretorioImagens unique: true
 		nomeArquivoImagemPrincipalThumbnail blank: true, nullable: true
+		nomeArquivoImagemReduzida blank: true, nullable: true
     }
 	
-	static propriedadesExcluidasListaView = ["resumo", "descricao", "nomeArquivoImagemPrincipalThumbnail"]
+	static propriedadesExcluidasListaView = ["resumo", "descricao", "nomeArquivoImagemPrincipalThumbnail", "nomeArquivoImagemReduzida"]
 }

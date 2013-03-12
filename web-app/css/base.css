@@ -75,10 +75,11 @@ p {
 html {
 	background-image: url('../images/cupcake_background3.png');
 	background-repeat: repeat;
+	background-attachment: fixed;
 }
 
 body {
-	background: #ffffff;
+	background: transparent url('../images/white80.png') repeat scroll top left;
 	color: #333333;
 	margin: 0 auto;
 	max-width: 960px;
@@ -87,7 +88,9 @@ body {
 	-webkit-box-shadow: 0 0 0.3em #255b17;
 	        box-shadow: 0 0 0.3em #255b17;
 }
-
+.span10eMeio {
+  width: 740px;
+}
 .bodyWrapper {
 	padding-bottom: 2%;
 	padding-left: 2%;
@@ -107,4 +110,8 @@ div.bg-color-pinkLight {
 .rounded {
 	-moz-border-radius: 15px;
 	border-radius: 15px;
+}
+
+.tile-pinkLight:hover {
+    outline: 3px solid #b91d47;
 }
