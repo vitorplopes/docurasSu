@@ -21,7 +21,7 @@
 				<div class="page-region-content">
 					<div class="grid">
 						<div class="row">
-							<div class="span10">
+							<div class="span10" style="margin-right:-7px;">
 								<div style="padding-left:10px;"><g:render template="paginacaoGridProdutos" bean="${produtos}"/></div>
 								<div id="divProdutos">
 									<g:render template="gridProdutos" bean="${produtos}" />
@@ -34,12 +34,7 @@
 						</div>
 					</div>
 					
-					<div class="grid" style="width: 70%; margin: 0px auto 20px;">
-						<div class="row">
-							<g:gridTiposPromocoes/>
-						</div>
-					</div>
-					
+					<g:gridTiposPromocoes/>
 					
 				</div>			
 			</div>

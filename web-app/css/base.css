@@ -73,28 +73,29 @@ p {
 }
 
 html {
-	background-image: url('../images/cupcake_background3.png');
+	background-image: url('../images/site/cupcake_background3.png');
 	background-repeat: repeat;
 	background-attachment: fixed;
 }
 
 body {
-	background: transparent url('../images/white80.png') repeat scroll top left;
+	background: transparent url('../images/site/white80.png') repeat scroll top left;
 	color: #333333;
 	margin: 0 auto;
 	max-width: 960px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
-	   -moz-box-shadow: 0 0 0.3em #255b17;
-	-webkit-box-shadow: 0 0 0.3em #255b17;
-	        box-shadow: 0 0 0.3em #255b17;
+	   -moz-box-shadow: 0 0 1.0em #F0CDE2;
+	-webkit-box-shadow: 0 0 1.0em #F0CDE2;
+	        box-shadow: 0 0 1.0em #F0CDE2;
 }
 .span10eMeio {
   width: 740px;
 }
 .bodyWrapper {
+	padding-top: 2%;
 	padding-bottom: 2%;
-	padding-left: 2%;
-	padding-right: 2%;
+	padding-left: 5%;
+	padding-right: 0px;
 }
 
 div.bg-color-pinkLight {
@@ -114,4 +115,8 @@ div.bg-color-pinkLight {
 
 .tile-pinkLight:hover {
     outline: 3px solid #b91d47;
+}
+
+.background-bege-quadrado {
+	background-image: url('../images/site/background.png');
 }

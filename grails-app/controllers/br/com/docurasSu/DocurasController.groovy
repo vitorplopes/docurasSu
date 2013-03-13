@@ -23,7 +23,7 @@ class DocurasController {
 		}
 		[produto: produto]
 	}
-	
+
 	private def getProdutos(def tipo, def max, def offset){
 		if(tipo){
 			Produto.findAllByTipo(tipo, [max: 15, offset: params.offset])

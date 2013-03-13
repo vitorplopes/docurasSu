@@ -10,23 +10,27 @@ class GridTiposProdutosTagLib {
 
 		MarkupBuilder b = new MarkupBuilder(out)
 		
-		def tipos = [	'B':["Bolos", "images/cake_01.png"], 
-						'C':["Cupcakes", "images/choco_cupcake.png"], 
-						'T':["Tortas", "images/cake_02.png"], 
-						'D':["Docinhos", "images/docinhos_01.png"]]
+		def tipos = [	'B':["Bolos", "images/tiposProdutos/cake_01.png"], 
+						'C':["Cupcakes", "images/tiposProdutos/choco_cupcake.png"], 
+						'T':["Tortas", "images/tiposProdutos/cake_02.png"], 
+						'D':["Docinhos", "images/tiposProdutos/docinhos_01.png"]]
 		
-		for(def tipo: tipos){
-			b.a(href: "docuras?tipo=${tipo.key}"){
-				b.div('class': "tile icon bg-color-pinkLight tile-pinkLight"){
-					b.b 'class': "check", ""
-					b.div('class': "tile-content"){
-						b.img(src: tipo.value[1])
-					}
-					b.div('class': "brand"){
-						b.span('class': "name fg-color-red", "${tipo.value[0]}")
+		b.div('class': "grid", style:"width: 74%; margin: 0px auto 20px;"){
+			b.div('class': "row"){
+				for(def tipo: tipos){
+					b.a(href: "docuras?tipo=${tipo.key}"){
+						b.div('class': "tile icon bg-color-pinkLight tile-pinkLight"){
+							b.b 'class': "check", ""
+							b.div('class': "tile-content"){
+								b.img(src: tipo.value[1])
+							}
+							b.div('class': "brand"){
+								b.span('class': "name fg-color-red", "${tipo.value[0]}")
+							}
+						}
 					}
 				}
 			}
-		}
+		}		
 	}
 }

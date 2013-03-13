@@ -82,21 +82,6 @@ p {
 <r:require module="jquery" />
 <r:require module="metro" />
 <r:require module="baseCSS" />
-<r:require module="photoswipe" />
-
-<r:script>
-		(function(window, $, PhotoSwipe){
-			
-			$(document).ready(function(){
-				
-				var options = {};
-				$("#divProdutosImageCollection a").photoSwipe(options);
-				
-			});
-			
-			
-		}(window, window.jQuery, window.Code.PhotoSwipe));
-	</r:script>
 
 </head>
 <body class="body">
@@ -125,55 +110,7 @@ p {
 						</div>
 					</div>
 
-					<div class="grid" style="width: 70%; margin: 0px auto 20px;">
-						<div class="row">
-							<a href="docuras?tipo=B">
-								<div class="tile icon bg-color-pinkLight tile-pinkLight">
-									<b class="check"></b>
-									<div class="tile-content">
-										<img src="images/cake_01.png">
-									</div>
-									<div class="brand">
-										<span class="name fg-color-red">Bolos</span>
-									</div>
-								</div>
-							</a>
-							<a href="docuras?tipo=C">
-								<div class="tile icon bg-color-pinkLight tile-pinkLight">
-									<b class="check"></b>
-									<div class="tile-content">
-										<img src="images/choco_cupcake.png">
-									</div>
-									<div class="brand">
-										<span class="name fg-color-red">Cupcakes</span>
-									</div>
-								</div>
-							</a>
-							<a href="docuras?tipo=T">
-								<div class="tile icon bg-color-pinkLight tile-pinkLight">
-									<b class="check"></b>
-									<div class="tile-content">
-										<img src="images/cake_02.png">
-									</div>
-									<div class="brand">
-										<span class="name fg-color-red">Tortas</span>
-									</div>
-								</div>
-							</a>
-							<a href="docuras?tipo=D">
-								<div class="tile icon bg-color-pinkLight tile-pinkLight">
-									<b class="check"></b>
-									<div class="tile-content">
-										<img src="images/docinhos_01.png">
-									</div>
-									<div class="brand">
-										<span class="name fg-color-red">Docinhos</span>
-									</div>
-								</div>
-							</a>
-
-						</div>
-					</div>
+					<g:gridTiposPromocoes/>
 
 					<div class="grid">
 						<div class="row">
@@ -181,8 +118,7 @@ p {
 								<h2 class="fg-color-red" style="padding-left: 20px;">&nbsp;Quem
 									somos</h2>
 
-								<div
-									style="background-image: url('/DocurasSu/static/images/background.png');">
+								<div class="background-bege-quadrado">
 									<p class="fg-color-darken padding20 text-justify">Lorem
 										ipsum dolor sit amet, consectetur adipiscing elit. Sed a quam
 										in arcu viverra pretium vel vel est. Proin placerat
@@ -196,28 +132,26 @@ p {
 
 
 							<div class="span3 bg-color-pinkLight">
-								<img src="images/Untitled.png" class="place-right"
+								<img src="images/site/Untitled.png" class="place-right"
 									style="margin: 10px;">
 								<h2 class="fg-color-red" style="padding-left: 20px;">&nbsp;Contato</h2>
 
-								<div
-									style="background-image: url('/DocurasSu/static/images/background.png');">
+								<div class="background-bege-quadrado">
 									<p class="fg-color-darken padding10 text-center">(21)
 										9683-4778</p>
 									<p class="fg-color-darken padding10 text-center">(21)
 										3835-5069</p>
-									<p class="fg-color-darken padding10 text-center">docuras.su@gmail.com</p>
+									<p class="fg-color-darken padding10 text-center">docurasdasu1@gmail.com</p>
 								</div>
 
 							</div>
 
 							<div class="span4 bg-color-pinkLight">
-								<img src="images/facebook-icon.png" class="place-right"
+								<img src="images/site/facebook-icon.png" class="place-right"
 									style="margin: 10px;">
 								<h2 class="fg-color-red" style="padding-left: 20px;">&nbsp;Facebook</h2>
 
-								<div
-									style="background-image: url('/DocurasSu/static/images/background.png');">
+								<div class="background-bege-quadrado">
 									<p class="fg-color-darken padding10">Lorem ipsum dolor sit
 										amet, consectetur adipiscing elit. Sed a quam in arcu viverra
 										pretium vel vel est. Proin placerat sollicitudin urna. Integer
@@ -236,8 +170,7 @@ p {
 								<h2 class="fg-color-red" style="padding-left: 20px;">&nbsp;Últimas
 									Delícias!</h2>
 
-								<div class="span11 padding10"
-									style="background-image: url('/DocurasSu/static/images/background.png');">
+								<div class="span11 padding10 background-bege-quadrado">
 
 									<g:gridProdutos produtos="${ultimosProdutos}" />
 

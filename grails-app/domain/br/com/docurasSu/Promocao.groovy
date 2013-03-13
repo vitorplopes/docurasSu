@@ -5,7 +5,7 @@ import java.sql.Date;
 class Promocao {
 
 	Date dateCreated
-	String nome
+	String titulo
 	String resumo
 	String descricao
 	String nomeDiretorioImagens
@@ -21,7 +21,7 @@ class Promocao {
 	}
 	
     static constraints = {
-		nome blank: true, nullable: true
+		titulo blank: true, nullable: true
 		resumo blank: true, nullable: true
 		descricao blank: true, nullable: true
 		nomeDiretorioImagens unique: true
