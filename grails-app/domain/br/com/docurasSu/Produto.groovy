@@ -11,24 +11,26 @@ class Produto {
 	String descricao
 	String preco
 	String nomeDiretorioImagens
-	String nomeArquivoImagemPrincipal
-	String nomeArquivoImagemPrincipalThumbnail
-	
-	static hasMany = [imagens : Imagem]
+	int quantidadeImagens
 	
 	static mapping = {
 		nome index: 'Produto_Nome_Idx'
 		tipo index: 'Produto_Tipo_Idx'
-		imagens index: 'Produto_Imagens_Idx'
 	}
 	
     static constraints = {
 		preco blank: true, nullable: true
-		tipo blank: true, nullable: true
-		nomeDiretorioImagens nullable: true, unique: true
-		nomeArquivoImagemPrincipal nullable: true
-		nomeArquivoImagemPrincipalThumbnail nullable: true
     }
 	
-	static propriedadesExcluidasListaView = ["resumo", "descricao", "nomeDiretorioImagens", "nomeArquivoImagemPrincipal", "nomeArquivoImagemPrincipalThumbnail"]
+	static transients = ["nomeArquivoImagemPrincipal", "nomeArquivoImagemPrincipalThumbnail"]
+	
+	static propriedadesExcluidasListaView = ["resumo", "descricao", "nomeArquivoImagemPrincipal", "nomeArquivoImagemPrincipalThumbnail"]
+	
+	String getNomeArquivoImagemPrincipal(){
+		nomeDiretorioImagens + "_principal.jpg"
+	}
+	
+	String getNomeArquivoImagemPrincipalThumbnail(){
+		nomeDiretorioImagens + "_principal_thumb.jpg"
+	}
 }

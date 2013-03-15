@@ -19,7 +19,7 @@ class GridPromocoesTagLib {
 		for(def promocao: attrs.promocoes){
 			b.a(href: grailsLinkGenerator.link(controller:"promocoes", action: "ver", id: promocao.id)){
 				b.div('class': "tile image"){
-					b.img(src: g.createLinkTo(dir: imagemService.getCaminhoImagemPromocaoAmbiente(promocao.nomeDiretorioImagens), file: promocao.nomeArquivoImagemReduzida))
+					mkp.yieldUnescaped(g.imagemPromocao(nomeDiretorioImagens: promocao.nomeDiretorioImagens, nomeArquivoImagem: promocao.nomeArquivoImagemSecundaria))
 				}
 			}
 		}

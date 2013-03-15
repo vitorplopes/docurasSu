@@ -2,8 +2,6 @@ package br.com.docurasSu
 
 class CarroselPromocoesTagLib {
 	
-	ImagemService imagemService;
-	
 	def grailsLinkGenerator
 	
 	def carroselPromocoes = {attrs, body ->
@@ -18,7 +16,9 @@ class CarroselPromocoesTagLib {
 				
 		for(promocao in attrs.promocoes){
 			out << "<div class='slide image' id='slide${i}' style='display: block;'>"
-			out << "<a href='${grailsLinkGenerator.link(controller:'promocoes', action: 'ver', id: promocao.id)}'><img src='${imagemService.getCaminhoImagemPromocaoAmbiente(promocao.nomeDiretorioImagens, promocao.nomeArquivoImagemPrincipal)}'></a>"
+			out << "<a href='${grailsLinkGenerator.link(controller:'promocoes', action: 'ver', id: promocao.id)}'>"
+			out << g.imagemPromocao(nomeDiretorioImagens: promocao.nomeDiretorioImagens, nomeArquivoImagem: promocao.nomeArquivoImagemPrincipal)
+			out << "</a>"
 			out << "<div class='description'>${promocao.descricao}</div>"
 			out << "</div>"
 		}

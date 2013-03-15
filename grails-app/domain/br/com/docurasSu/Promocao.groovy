@@ -9,25 +9,28 @@ class Promocao {
 	String resumo
 	String descricao
 	String nomeDiretorioImagens
-	String nomeArquivoImagemPrincipal
-	String nomeArquivoImagemPrincipalThumbnail
-	String nomeArquivoImagemReduzida
 	boolean valida = true
-	
-	static hasMany = [imagens : Imagem]
-	
-	static mapping = {
-		imagens index: 'Promocao_Imagens_Idx'
-	}
+	int quantidadeImagens
 	
     static constraints = {
-		titulo blank: true, nullable: true
 		resumo blank: true, nullable: true
 		descricao blank: true, nullable: true
-		nomeDiretorioImagens unique: true
-		nomeArquivoImagemPrincipalThumbnail blank: true, nullable: true
-		nomeArquivoImagemReduzida blank: true, nullable: true
+		nomeDiretorioImagens blank: true, nullable: true
     }
 	
-	static propriedadesExcluidasListaView = ["resumo", "descricao", "nomeArquivoImagemPrincipalThumbnail", "nomeArquivoImagemReduzida"]
+	static propriedadesExcluidasListaView = ["resumo", "descricao", "nomeArquivoImagemPrincipal", "nomeArquivoImagemPrincipalThumbnail", "nomeArquivoImagemSecundaria"]
+	
+	static transients = ["nomeArquivoImagemPrincipal", "nomeArquivoImagemPrincipalThumbnail", "nomeArquivoImagemSecundaria"]
+	
+	String getNomeArquivoImagemPrincipal(){
+		nomeDiretorioImagens + "_principal.jpg"
+	}
+	
+	String getNomeArquivoImagemPrincipalThumbnail(){
+		nomeDiretorioImagens + "_principal_thumb.jpg"
+	}
+	
+	String getNomeArquivoImagemSecundaria(){
+		nomeDiretorioImagens + "_secundaria.jpg"
+	}
 }

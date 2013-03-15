@@ -12,7 +12,11 @@
 		<div class="page"> 
 			<div class="page-header">
 				<div class="page-header-content">
-					<h1><g:tituloTipoProduto tipo="${params.tipo}"/></h1>
+					<h1>
+						<g:imagemTipoProduto nomeArquivoImagem="cake_01.png" style="width:64px; height:64px;"/>
+						<g:tituloTipoProduto tipo="${params.tipo}"/>
+					</h1>
+					
 					<%--<a class="back-button big page-back" href="/DocurasSu"></a>--%>
 				</div>
 			</div>

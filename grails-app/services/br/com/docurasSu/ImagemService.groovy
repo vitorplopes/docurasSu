@@ -1,38 +1,49 @@
 package br.com.docurasSu
 
 class ImagemService {
-
-	String getCaminhoImagemProdutoAmbiente(String nomeDiretorioImagem) {
-		"images/produtos/${nomeDiretorioImagem}"
+	
+	static String prefixoURL = "http://dl.dropbox.com/u/144356318";
+	
+	String getNomeArquivoImagemProduto(int i, Produto produto){
+		produto.nomeDiretorioImagens + "_${i}.jpg"
 	}
 	
-    String getCaminhoImagemProdutoAmbiente(String nomeDiretorioImagem, String nomeArquivo) {
-		"images/produtos/${nomeDiretorioImagem}/${nomeArquivo}"
-    }
+	String getNomeArquivoImagemThumbnailProduto(int i, Produto produto){
+		produto.nomeDiretorioImagens + "_thumb_${i}.jpg"
+	}
+
+	String getNomeArquivoImagemPromocao(int i, Promocao promocao){
+		promocao.nomeDiretorioImagens + "_${i}.jpg"
+	}
 	
-	String getCaminhoImagemPromocaoAmbiente(String nomeDiretorioImagem) {
-		if(nomeDiretorioImagem){
-			"images/promocoes/${nomeDiretorioImagem}"
+	String getNomeArquivoImagemThumbnailPromocao(int i, Promocao promocao){
+		promocao.nomeDiretorioImagens + "_thumb_${i}.jpg"
+	}
+
+	def getCaminhoImagemPromocao = { String nomeDiretorioImagens ->
+		if(nomeDiretorioImagens){
+			"images/promocoes/${nomeDiretorioImagens}"
 		}
 		else{
 			"images/promocoes"
 		}
 	}
 	
-	String getCaminhoImagemPromocaoAmbiente(String nomeDiretorioImagem, String nomeArquivo) {
-		if(nomeDiretorioImagem){
-			"images/promocoes/${nomeDiretorioImagem}/${nomeArquivo}"
+	def getCaminhoImagemProduto = { String nomeDiretorioImagens ->
+		if(nomeDiretorioImagens){
+			"images/produtos/${nomeDiretorioImagens}"
 		}
 		else{
-			"images/promocoes/${nomeArquivo}"
+			"images/produtos"
 		}
 	}
 	
-	String getCaminhoImagemTipoProdutoAmbiente() {
-		"images/tipos"
-	}
-	
-	String getCaminhoImagemTipoProdutoAmbiente(String nomeArquivo) {
-		"images/tipos/${nomeArquivo}"
+	def getCaminhoImagemTipoProduto = { String nomeDiretorioImagens ->
+		if(nomeDiretorioImagens){
+			"images/tiposProdutos/${nomeDiretorioImagens}"
+		}
+		else{
+			"images/tiposProdutos"
+		}
 	}
 }

@@ -7,6 +7,8 @@ class Imagem {
 	String nomeArquivo
 	String nomeArquivoThumbnail
 	
+	static mapWith = "none"
+	
     static constraints = {
 		nome nullable: true
 		descricao nullable: true
