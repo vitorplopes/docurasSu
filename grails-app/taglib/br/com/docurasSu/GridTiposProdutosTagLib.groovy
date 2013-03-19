@@ -6,18 +6,15 @@ class GridTiposProdutosTagLib {
 	
 	def imagemService
 	
+	def tipoProdutoService
+	
 	def gridTiposPromocoes = {attrs, body ->
 
 		MarkupBuilder b = new MarkupBuilder(out)
 		
-		def tipos = [	'B':["Bolos", "cake_01.png"], 
-						'C':["Cupcakes", "choco_cupcake.png"], 
-						'T':["Tortas", "cake_02.png"], 
-						'D':["Docinhos", "docinhos_01.png"]]
-		
-		b.div('class': "grid", style:"width: 74%; margin: 0px auto 20px;"){
+		b.div('class': "grid", style:"width: 67%; margin: 0px auto 20px;"){
 			b.div('class': "row"){
-				for(def tipo: tipos){
+				for(def tipo: tipoProdutoService.tipos){
 					b.a(href: "docuras?tipo=${tipo.key}"){
 						b.div('class': "tile icon bg-color-pinkLight tile-pinkLight"){
 							b.b 'class': "check", ""

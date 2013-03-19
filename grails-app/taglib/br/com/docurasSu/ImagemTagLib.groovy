@@ -7,6 +7,8 @@ class ImagemTagLib {
 
 	def imagemService
 	
+	def tipoProdutoService
+	
 	private impl(out, attrs, closure){
 		
 		out << "<img "
@@ -39,6 +41,23 @@ class ImagemTagLib {
 	}
 	
 	def imagemTipoProduto = {attrs, body ->
+		if(attrs.tipo){
+/*			switch(attrs.tipo){
+				case 'B':
+					out << "Bolos"
+					break
+				case 'C':
+					out << "Cupakes"
+					break
+				case 'T':
+					out << "Tortas"
+					break
+				case 'D':
+					out << "Docinhos"
+					break
+			}*/
+			attrs.nomeArquivoImagem = tipoProdutoService.getNomeArquivoTipo(attrs.tipo as char)
+		}
 		impl(out, attrs, imagemService.getCaminhoImagemTipoProduto)
 	}
 }

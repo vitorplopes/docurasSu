@@ -10,12 +10,13 @@ class Promocao {
 	String descricao
 	String nomeDiretorioImagens
 	boolean valida = true
-	int quantidadeImagens
+	int quantidadeImagens = 0
 	
     static constraints = {
 		resumo blank: true, nullable: true
 		descricao blank: true, nullable: true
-		nomeDiretorioImagens blank: true, nullable: true
+		nomeDiretorioImagens unique: true
+		quantidadeImagens unique: true
     }
 	
 	static propriedadesExcluidasListaView = ["resumo", "descricao", "nomeArquivoImagemPrincipal", "nomeArquivoImagemPrincipalThumbnail", "nomeArquivoImagemSecundaria"]

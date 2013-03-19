@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta name="layout" content="main" />
 	<r:require module="jquery" />
@@ -8,34 +8,40 @@
 </head>
 <body class="body">
 
+	<g:gridPromocoes/>
+	
 	<div class="bodyWrapper">
-		<div class="page"> 
+		<div class="page secondary"> 
 			<div class="page-header">
 				<div class="page-header-content">
-					<h1>
-						<g:imagemTipoProduto nomeArquivoImagem="cake_01.png" style="width:64px; height:64px;"/>
-						<g:tituloTipoProduto tipo="${params.tipo}"/>
-					</h1>
-					
 					<%--<a class="back-button big page-back" href="/DocurasSu"></a>--%>
+					<div class="grid">
+						<div class="row">
+							<div class="span10">
+								<h1>
+									<g:imagemTipoProduto tipo="${params.tipo}" style="width:64px; height:64px;"/>
+									<g:tituloTipoProduto tipo="${params.tipo}"/>
+								</h1>
+							</div>
+						</div>
 				</div>
 			</div>
 	
 			<div class="page-region">
 				<div class="page-region-content">
-					<div class="grid">
+					
 						<div class="row">
-							<div class="span10" style="margin-right:-7px;">
+							<div class="span12" style="margin-right:-7px;">
 								<div style="padding-left:10px;"><g:render template="paginacaoGridProdutos" bean="${produtos}"/></div>
 								<div id="divProdutos">
 									<g:render template="gridProdutos" bean="${produtos}" />
 								</div>
 							</div>
-							<div class="span2">
+							<%--<div class="span2">
 								<h2 style="text-align:center;">Promoções</h2>
 								<g:gridPromocoes promocoes="${ultimasPromocoes}"/>
 							</div>
-						</div>
+						--%></div>
 					</div>
 					
 					<g:gridTiposPromocoes/>
@@ -83,7 +89,7 @@
 		}
 		
 	</r:script>
-
+<g:javascript src="metro/tile-slider.js" ></g:javascript>
 </body>
 </html>
 

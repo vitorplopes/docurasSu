@@ -20,6 +20,7 @@ class Produto {
 	
     static constraints = {
 		preco blank: true, nullable: true
+		nomeDiretorioImagens unique: true
     }
 	
 	static transients = ["nomeArquivoImagemPrincipal", "nomeArquivoImagemPrincipalThumbnail"]
