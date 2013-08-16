@@ -5,7 +5,6 @@
 	<r:require module="jquery" />
 	<r:require module="metro" />
 	<r:require module="baseCSS" />
-	<r:require module="flexslider" />
 	<r:require module="photoswipe" />
 </head>
 <body class="body">
@@ -34,7 +33,7 @@
 					<div class="row">
 
 						<div class="span6">
-							<g:carroselProduto produto="${produto}"/>
+							<g:produtoImageCollection produto="${produto}"/>
 						</div>
 
 						<div class="span4 bg-color-pinkLight">
@@ -57,13 +56,17 @@
 	</div>
 
 	<g:javascript>
-		$(document).ready(function(){
+		(function(window, $, PhotoSwipe){
 			
-			$('.flexslider').flexslider({
-			    animation: "slide"
-			  });
+			$(document).ready(function(){
+				
+				var options = {};
+				$("#Gallery a").photoSwipe(options);
+				
+			});
 			
-		});
+			
+		}(window, window.jQuery, window.Code.PhotoSwipe));
 	</g:javascript>
 </body>
 </html>

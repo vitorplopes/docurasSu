@@ -6,7 +6,23 @@ String prefix = "http://dl.dropbox.com/u/144356318/"
 boolean isDevMode() { !Metadata.current.isWarDeployed() }
 
 modules = {
+	flexslider {
+		
+		dependsOn 'jquery'
+		
+		if(isDevMode()){
+			resource url:'css/flexslider/flexslider.css', disposition: 'head'
+			resource url:'js/flexslider/jquery.flexslider-min.js', disposition: 'head'
+		}
+		else{
+			resource url: prefix + 'css/flexslider/flexslider.css', disposition: 'head'
+			resource url: prefix + 'js/flexslider/jquery.flexslider-min.js', disposition: 'head'
+		}
+	}
 	photoswipe {
+		
+		dependsOn 'jquery'
+		
 		if(isDevMode()){
 			resource url:'js/photoswipe/klass.min.js', disposition: 'head'
 			resource url:'js/photoswipe/code.photoswipe.jquery-3.0.5.min.js', disposition: 'head'
@@ -33,6 +49,9 @@ modules = {
 
     }
 	metro {
+		
+		dependsOn 'jquery'
+		
 		if(isDevMode()){
 			resource url: 'css/metro/modern.css', disposition: 'head'
 			resource url:'css/metro/modern-responsive.css', disposition: 'head'
