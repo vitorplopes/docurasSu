@@ -8,8 +8,6 @@
 </head>
 <body class="body">
 
-	<g:gridPromocoes/>
-	
 	<div class="bodyWrapper">
 		<div class="page secondary"> 
 			<div class="page-header">
@@ -50,6 +48,8 @@
 			</div>
 		</div>
 	</div>
+	
+	<g:gridPromocoes/>
 
 	<r:script>
 		$(document).ready($(function() {

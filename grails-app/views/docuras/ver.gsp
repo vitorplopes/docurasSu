@@ -19,6 +19,8 @@
 		};
 	</r:script>
 
+	<g:gridPromocoes/>
+
 	<div class="page secondary">
 		<div class="page-header">
 			<div class="page-header-content">
@@ -51,6 +53,10 @@
 				
 				</div>
 				
+				<!--  <div id="colecao">
+					<g:produtoImageCollection produto="${produto}"/>
+				</div>
+				-->
 			</div>
 		</div>
 	</div>
@@ -61,6 +67,8 @@
 			$('.flexslider').flexslider({
 			    animation: "slide"
 			  });
+			  
+			$("#Gallery a").photoSwipe({});
 			
 		});
 	</g:javascript>
