@@ -40,8 +40,8 @@
 							<%--<div class="span2">
 								<h2 style="text-align:center;">Promoções</h2>
 								<g:gridPromocoes promocoes="${ultimasPromocoes}"/>
-							</div>
-						--%></div>
+							</div>--%>
+						</div>
 					</div>
 					
 					<g:gridTiposPromocoes/>
