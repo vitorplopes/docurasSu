@@ -18,8 +18,12 @@ class CarroselProdutoTagLib {
 		out << "<ul class='slides' onclick=\"\$('#Gallery div:first-child a').click();\">"
 						
 		for(int i = 1; i <= attrs.produto.quantidadeImagens; i++){
-			out << "<li>"
-			out << g.imagemProduto(nomeDiretorioImagens: attrs.produto.nomeDiretorioImagens, nomeArquivoImagem: attrs.produto.nomeArquivoImagemPrincipal)
+			
+			def linkImagem;
+			//def linkImagem = g.createLinkTo(dir: imagemService.getCaminhoImagemProduto(attrs.produto.nomeDiretorioImagens), file: imagemService.getNomeArquivoImagemThumbnailProduto(i, attrs.produto))
+			
+			out << "<li data-thumb=\"$linkImagem\">"
+			out << g.imagemProduto(nomeDiretorioImagens: attrs.produto.nomeDiretorioImagens, nomeArquivoImagem: imagemService.getNomeArquivoImagemProduto(i,attrs.produto))
 			out << "</li>"
 		}
 				

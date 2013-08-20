@@ -12,6 +12,7 @@ class Produto {
 	String preco
 	String nomeDiretorioImagens
 	int quantidadeImagens
+	String idFacebook
 	
 	static mapping = {
 		nome index: 'Produto_Nome_Idx'
@@ -21,11 +22,12 @@ class Produto {
     static constraints = {
 		preco blank: true, nullable: true
 		nomeDiretorioImagens unique: true
+		idFacebook nullable: true
     }
 	
 	static transients = ["nomeArquivoImagemPrincipal", "nomeArquivoImagemPrincipalThumbnail"]
 	
-	static propriedadesExcluidasListaView = ["resumo", "descricao", "nomeArquivoImagemPrincipal", "nomeArquivoImagemPrincipalThumbnail"]
+	static propriedadesExcluidasListaView = ["resumo", "descricao", "idFacebook", "nomeArquivoImagemPrincipal", "nomeArquivoImagemPrincipalThumbnail"]
 	
 	String getNomeArquivoImagemPrincipal(){
 		nomeDiretorioImagens + "_principal.jpg"

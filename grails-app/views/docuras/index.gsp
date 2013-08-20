@@ -35,21 +35,13 @@
 									<g:render template="gridProdutos" bean="${produtos}" />
 								</div>
 							</div>
-							<%--<div class="span2">
-								<h2 style="text-align:center;">Promoções</h2>
-								<g:gridPromocoes promocoes="${ultimasPromocoes}"/>
-							</div>--%>
 						</div>
 					</div>
-					
-					<g:gridTiposPromocoes/>
 					
 				</div>			
 			</div>
 		</div>
 	</div>
-	
-	<g:gridPromocoes/>
 
 	<r:script>
 		$(document).ready($(function() {

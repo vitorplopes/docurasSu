@@ -9,7 +9,7 @@ class GridProdutosTagLib {
 			return
 		}
 		
-		out << "<div id='divProdutosImageCollection' class='image-collection' style='padding: 10px; text-align: center;'>"
+		out << "<div id='divProdutosImageCollection' class='image-collection' style='padding: 10px; width: 90%; margin: auto;'>"
 		
 		for(produto in attrs.produtos){
 			out << "<div class='tile image shadow'>"

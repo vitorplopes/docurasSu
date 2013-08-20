@@ -32,6 +32,10 @@ class ImagemTagLib {
 			out << "alt='${attrs.alt}' "
 		}
 		
+		if(attrs.'class'){
+			out << "class='${attrs.'class'}' "
+		}
+		
 		out << "/>"
 	}
 	

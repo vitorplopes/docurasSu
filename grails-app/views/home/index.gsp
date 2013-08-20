@@ -85,8 +85,8 @@ p {
 
 </head>
 <body class="body">
-	<div class="bodyWrapper">
-		<div class="page">
+	<div class="bodyWrapper" style="width:100%;">
+		<div class="page" style="width:90%;margin:auto;">
 			<div class="page-region">
 				<div class="page-region-content">
 
@@ -170,11 +170,9 @@ p {
 								<h2 class="fg-color-red" style="padding-left: 20px;">&nbsp;Últimas
 									Delícias!</h2>
 
-								<div class="span11 padding10 background-bege-quadrado">
+								<div class="span11 padding10 background-bege-quadrado" style="width: 100%;">
 
 									<g:gridProdutos produtos="${ultimosProdutos}" />
-
-									<p class="fg-color-darken padding5 text-center">&nbsp;</p>
 
 								</div>
 							</div>

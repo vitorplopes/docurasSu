@@ -24,7 +24,7 @@
 	<div class="page secondary">
 		<div class="page-header">
 			<div class="page-header-content">
-				<!--<h1>${produto.nome}</h1>-->
+				<h1>${produto.nome}</h1>
 				<a class="back-button big page-back" href="/DocurasSu"></a>
 			</div>
 		</div>
@@ -33,18 +33,20 @@
 			<div class="page-region-content">
 
 				<div class="grid">
-				
-					<div class="row">
-						<div class="span10 bg-color-pinkLight">
-							<h2 class="fg-color-red" style="padding-left:20px;">Huuuuummmmmm, delícia!</h2>
-	
-							<div class="background-bege-quadrado">
-								<p class="fg-color-darken padding20 text-justify">${produto.descricao}</p>
+					
+					<% if(produto.descricao) {%>
+						<div class="row">
+							<div class="span10 bg-color-pinkLight">
+								<h2 class="fg-color-red" style="padding-left:20px;">Huuuuummmmmm, delícia!</h2>
+		
+								<div class="background-bege-quadrado">
+									<p class="fg-color-darken padding20 text-justify">${produto.descricao}</p>
+								</div>
+		
 							</div>
-	
 						</div>
-					</div>
-	
+				    <%}%>
+					
 					<div class="row">
 						<div class="span10">
 							<g:carroselProduto produto="${produto}"/>
@@ -52,11 +54,7 @@
 					</div>
 				
 				</div>
-				
-				<!--  <div id="colecao">
-					<g:produtoImageCollection produto="${produto}"/>
-				</div>
-				-->
+
 			</div>
 		</div>
 	</div>
@@ -66,6 +64,7 @@
 			
 			$('.flexslider').flexslider({
 			    animation: "slide"
+    			//controlNav: "thumbnails"
 			  });
 			  
 			$("#Gallery a").photoSwipe({});

@@ -3,10 +3,10 @@ package br.com.docurasSu
 class TipoProdutoService {
 
 	static tipos = [	
-		'B':["Bolos", "cake_01.png"],
-		'C':["Cupcakes", "choco_cupcake.png"],
-		'T':["Tortas", "cake_02.png"],
-		'D':["Docinhos", "docinhos_01.png"]
+		'B':["Bolos", "cake_03.png"],
+		'C':["Cupcakes", "choco_cupcake2.png"],
+		//'T':["Tortas", "cake_02.png"],
+		'D':["Docinhos", "docinhos_02.png"]
 	]
 	
     def getNomeTipo(char tipo) {
@@ -15,8 +15,8 @@ class TipoProdutoService {
 				tipos.get('B')[0]
 			case 'C':
 				tipos.get('C')[0]
-			case 'T':
-				tipos.get('T')[0]
+			//case 'T':
+			//	tipos.get('T')[0]
 			case 'D':
 				tipos.get('D')[0]
 			default:
@@ -32,9 +32,9 @@ class TipoProdutoService {
 			case 'C':
 				tipos.get('C')[1]
 				break
-			case 'T':
-				tipos.get('T')[1]
-				break
+			//case 'T':
+			//	tipos.get('T')[1]
+			//	break
 			default:
 				tipos.get('D')[1]
 				break
